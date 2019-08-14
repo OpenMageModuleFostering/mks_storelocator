@@ -1,3 +1,4 @@
+
 <?php
 $prefix = Mage::getConfig()->getTablePrefix();
 $connection = Mage::getSingleton('core/resource')->getConnection('core_write');
@@ -49,5 +50,5 @@ var miles = 3;
 } google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
-<body onload="map_xxx('<?php  echo $latitudex ?>','<?php echo $longitudex; ?>','<?php echo $addressx; ?>','<?php echo $radius; ?>');">
-<?php  $sql = $connection->query("select * from $tblname where status='0'" ); ?> 
+
+
