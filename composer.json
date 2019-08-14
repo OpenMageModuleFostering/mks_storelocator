@@ -3,10 +3,10 @@
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
-    "description": "Help your customers to find a physical store. Navigation system and a lot of others features to discover ! ",
+    "description": "Store Locator show multi store. store locator increase your store sell. famous store with store locator.",
     "authors": [
     {
-        "name": "Mukesh Kumar saini",
+        "name": "mukesh kumar saini",
         "email": "in.mukeshsaini@gmail.com"
     }
 ],
