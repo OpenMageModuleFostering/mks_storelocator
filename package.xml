@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Mks_Storelocator</name>
+    <version>1.1.1</version>
+    <stability>stable</stability>
+    <license>OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Help your customers to find a physical store. Navigation system and a lot of others features to discover ! </summary>
+    <description>Magento Store locator extension provides you the best solution to easily set up and reference all your physical stores using the google Map API.&#xD;
+Magento Store locator is easy to install and set up.</description>
+    <notes>Magento Store locator extension provides you the best solution to easily set up and reference all your physical stores using the google Map API.&#xD;
+Magento Store locator is easy to install and set up.</notes>
+    <authors><author><name>Mukesh Kumar saini</name><user>mukeshbagri</user><email>in.mukeshsaini@gmail.com</email></author></authors>
+    <date>2014-01-02</date>
+    <time>07:11:46</time>
+    <contents><target name="magecommunity"><dir name="Mks"><dir name="Storelocator"><dir name="Block"><dir name="Adminhtml"><dir name="Storelocator"><dir name="Edit"><file name="Form.php" hash="00fed13f02e804d93bac7258689769ad"/><dir name="Tab"><file name="Form.php" hash="4620d9bad225fc9dc88b808fccae3b2f"/></dir><file name="Tabs.php" hash="8819f35cd4af4b61d14bf377c58432b6"/></dir><file name="Edit.php" hash="9be35d036a69cfb545d2f1c1649cb6ba"/><file name="Grid.php" hash="c1901ceac4aec85340a9d4f2d5e9df9f"/></dir><file name="Storelocator.php" hash="81770ec5e092a177c22e188b8db38d7e"/><file name="Storelocatorbackend.php" hash="d600cb8ff797f008c7c652a299305c8d"/></dir><file name="Index.php" hash="85128403f14502fe6642a23231079532"/></dir><dir name="Helper"><file name="Data.php" hash="083521dd42bf734a864e06dceb37b5a0"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Storelocator"><file name="Collection.php" hash="183c5eeeb2ef6b444bfc08a829b93cde"/></dir><file name="Storelocator.php" hash="29d65325bd746be070275726e309afdb"/></dir><file name="Storelocator.php" hash="e91d32a733f49d62d54c1335a57e2ee5"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="StorelocatorController.php" hash="0c853bc509d0069930481f4d09e426c6"/><file name="StorelocatorbackendController.php" hash="ea616e919ef3a6492ebbfb55daf57ea1"/></dir><file name="IndexController.php" hash="2da311b739d05591f0f4355c740cb5bc"/></dir><dir name="etc"><file name="config.xml" hash="1aed48b7351a7e3dcd8924c146ac4af0"/></dir><dir name="sql"><dir name="storelocator_setup"><file name="mysql4-install-1.1.1.php" hash="c30c6bcbb6b8b6a211f66e3e0da62586"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Mks_Storelocator.xml" hash="a6f6119398e1ac1d5d007d16f0b1a9c9"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="storelocator.xml" hash="c5ce52ab3f3f3d71dbb902134642e2dc"/></dir><dir name="template"><dir name="storelocator"><file name="storelocatorbackend.phtml" hash="e07dd382a8826b59d7ff43774fc73d87"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="storelocator.xml" hash="db01f1e299e94c6a4d633a1d2458f343"/></dir><dir name="template"><dir name="storelocator"><file name="index.phtml" hash="8e1c82a98529be3dd1d8fc5eb15b7580"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
