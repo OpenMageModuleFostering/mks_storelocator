@@ -1,3 +1,18 @@
+<?php   $enable=$this->getStorelocatorEnabled();   ?>
+<?php   $name=$this->getStorelocatorName();   ?>
+<?php   $address=$this->getStorelocatorAddress();   ?>
+<?php   $zipcode=$this->getStorelocatorZipcode();   ?>
+<?php   $city=$this->getStorelocatorCity();   ?>
+<?php   $country=$this->getStorelocatorCountry();   ?>
+<?php   $phone=$this->getStorelocatorPhone();   ?>
+<?php   $fax=$this->getStorelocatorFax();   ?>
+<?php   $description=$this->getStorelocatorDescription();   ?>
+<?php   $email=$this->getStorelocatorEmail();   ?>
+<?php   $tradinghours=$this->getStorelocatorTradinghours();   ?>
+<?php   $image=$this->getStorelocatorImage();   ?>
+<?php   $stireurl=$this->getStorelocatorStoreurl();   ?>
+
+
 <?php  require_once 'app/design/frontend/base/default/template/storelocator/config.phtml'; ?> 
 <table id="map_xxx" style="width:900px; border:10px;">
 <tr><td style="height: 500px; overflow: auto; display:block;" >
@@ -6,32 +21,48 @@ while($row = $sql->fetch())
 {?>
 <table id="store-table" class="store-table" style="margin-bottom:10px;">
 <tr>
+<?php if($image==1) { ?>
 <td class="left">
 <img src="<?php echo  Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$row['image']; ?>" alt="<?php echo $row['name']; ?>" width="120" height="100" style="margin-right:5px;">
 </td>
+<?php } ?>
 <td class="right" style="width:250px;">
 <table class="mintbl">
 <tr>
+<?php if($name==1) { ?>
 <td>
-<h3 class="store_name"  onclick="map_xxx('<?php echo $row['lat']; ?>','<?php echo $row['longt']; ?>','<?php echo $row['address']; ?>');"><?php echo $row['name']; ?></h3>
+<h3 class="store_name"  onclick="map_xxx('<?php echo $row['lat']; ?>','<?php echo $row['longt']; ?>','<?php echo $row['address']; ?>','<?php echo $row['radius']; ?>');"><?php echo $row['name']; ?></h3>
 </td>
+<?php } ?>
 </tr>
+<?php if($address==1) { ?>
 <tr><td class="col-address"><?php echo $row['address']; ?></td></tr>
+<?php } ?>
 <tr><td class="col-address">
+<?php if($zipcode==1) { ?> 
 Zip Code : <?php echo $row['zipcode']; ?> &nbsp;,
+<?php } ?>
+<?php if($city==1) { ?>
 City : <?php echo $row['city']; ?> 
+<?php } ?>
 </td></tr>
+
 <tr><td class="col-address">
-Country : <?php echo $row['country_id']; ?> &nbsp;,
-Phone : <?php echo $row['phone']; ?> 
+<?php if($country==1) { ?> Country : <?php echo $row['country_id']; ?> &nbsp;, <?php } ?>
+<?php if($phone==1) { ?> Phone : <?php echo $row['phone']; ?> <?php } ?>
 </td></tr>
+<?php if($fax==1) { ?>
 <tr><td>Fax :<?php echo $row['fax']; ?></td></tr>
+<?php } ?>
 </table>
 </td>
 </tr>
-
+<?php if($stireurl==1) { ?>
 <tr><td colspan="2"> Website : <a href="<?php echo $row['store_url']; ?>" target="_blank"><?php echo $row['store_url']; ?></a></td></tr>
+<?php } ?>
+<?php if($address==1) { ?>
 <tr><td colspan="2"> <?php echo $row['description']; ?></td></tr>
+<?php } ?>
 </table>
 <?php   }  ?>
 

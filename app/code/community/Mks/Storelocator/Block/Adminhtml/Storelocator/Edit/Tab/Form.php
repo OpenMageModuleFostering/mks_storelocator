@@ -10,7 +10,9 @@ class Mks_Storelocator_Block_Adminhtml_Storelocator_Edit_Tab_Form extends Mage_A
 
 				
 						$fieldset->addField("name", "text", array(
-						"label" => Mage::helper("storelocator")->__("Name"),
+						"label" => Mage::helper("storelocator")->__("Name"),					
+						"class" => "required-entry",
+						"required" => true,
 						"name" => "name",
 						));
 					
@@ -30,7 +32,7 @@ class Mks_Storelocator_Block_Adminhtml_Storelocator_Edit_Tab_Form extends Mage_A
 						));
 					
 						$fieldset->addField("country_id", "text", array(
-						"label" => Mage::helper("storelocator")->__("Country Name"),
+						"label" => Mage::helper("storelocator")->__("Country"),
 						"name" => "country_id",
 						));
 					
@@ -53,30 +55,46 @@ class Mks_Storelocator_Block_Adminhtml_Storelocator_Edit_Tab_Form extends Mage_A
 						"label" => Mage::helper("storelocator")->__("Store Url"),
 						"name" => "store_url",
 						));
+					
+						$fieldset->addField("email", "text", array(
+						"label" => Mage::helper("storelocator")->__("Email"),
+						"name" => "email",
+						));
+					
+						$fieldset->addField("tradinghours", "text", array(
+						"label" => Mage::helper("storelocator")->__("Trading Hours"),
+						"name" => "tradinghours",
+						));
+					
+						$fieldset->addField("radius", "text", array(
+						"label" => Mage::helper("storelocator")->__("Radius"),					
+						"class" => "required-entry",
+						"required" => true,
+						"name" => "radius",
+						));
 									
 						$fieldset->addField('image', 'image', array(
-						'label' => Mage::helper('storelocator')->__('Image'),
+						'label' => Mage::helper('storelocator')->__('Store Image'),
 						'name' => 'image',
-						'note' => '(*.jpg, *.png, *.gif)',
-						));				
-						$fieldset->addField('marker', 'image', array(
-						'label' => Mage::helper('storelocator')->__('Marker Image'),
-						'name' => 'marker',
 						'note' => '(*.jpg, *.png, *.gif)',
 						));
 						$fieldset->addField("lat", "text", array(
-						"label" => Mage::helper("storelocator")->__("Latitude"),
+						"label" => Mage::helper("storelocator")->__("Latitude"),					
+						"class" => "required-entry",
+						"required" => true,
 						"name" => "lat",
 						));
 					
 						$fieldset->addField("longt", "text", array(
-						"label" => Mage::helper("storelocator")->__("Longitude"),
+						"label" => Mage::helper("storelocator")->__("Longitude"),					
+						"class" => "required-entry",
+						"required" => true,
 						"name" => "longt",
 						));
 									
 						 $fieldset->addField('status', 'select', array(
 						'label'     => Mage::helper('storelocator')->__('Status'),
-						'values'   => Mks_Storelocator_Block_Adminhtml_Storelocator_Grid::getValueArray13(),
+						'values'   => Mks_Storelocator_Block_Adminhtml_Storelocator_Grid::getValueArray15(),
 						'name' => 'status',
 						));
 

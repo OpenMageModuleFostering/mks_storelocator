@@ -4,7 +4,7 @@ class Mks_Storelocator_Adminhtml_StorelocatorbackendController extends Mage_Admi
 	public function indexAction()
     {
        $this->loadLayout();
-	   $this->_title($this->__("About us"));
+	   $this->_title($this->__("About Us"));
 	   $this->renderLayout();
     }
 }

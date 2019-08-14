@@ -8,7 +8,7 @@ class Mks_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml_
 				parent::__construct();
 				$this->setId("storelocatorGrid");
 				$this->setDefaultSort("id");
-				$this->setDefaultDir("ASC");
+				$this->setDefaultDir("DESC");
 				$this->setSaveParametersInSession(true);
 		}
 
@@ -41,7 +41,7 @@ class Mks_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml_
 				"index" => "city",
 				));
 				$this->addColumn("country_id", array(
-				"header" => Mage::helper("storelocator")->__("Country Name"),
+				"header" => Mage::helper("storelocator")->__("Country"),
 				"index" => "country_id",
 				));
 				$this->addColumn("phone", array(
@@ -56,6 +56,18 @@ class Mks_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml_
 				"header" => Mage::helper("storelocator")->__("Store Url"),
 				"index" => "store_url",
 				));
+				$this->addColumn("email", array(
+				"header" => Mage::helper("storelocator")->__("Email"),
+				"index" => "email",
+				));
+				$this->addColumn("tradinghours", array(
+				"header" => Mage::helper("storelocator")->__("Trading Hours"),
+				"index" => "tradinghours",
+				));
+				$this->addColumn("radius", array(
+				"header" => Mage::helper("storelocator")->__("Radius"),
+				"index" => "radius",
+				));
 				$this->addColumn("lat", array(
 				"header" => Mage::helper("storelocator")->__("Latitude"),
 				"index" => "lat",
@@ -68,7 +80,7 @@ class Mks_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml_
 						'header' => Mage::helper('storelocator')->__('Status'),
 						'index' => 'status',
 						'type' => 'options',
-						'options'=>Mks_Storelocator_Block_Adminhtml_Storelocator_Grid::getOptionArray13(),				
+						'options'=>Mks_Storelocator_Block_Adminhtml_Storelocator_Grid::getOptionArray15(),				
 						));
 						
 			$this->addExportType('*/*/exportCsv', Mage::helper('sales')->__('CSV')); 
@@ -97,17 +109,17 @@ class Mks_Storelocator_Block_Adminhtml_Storelocator_Grid extends Mage_Adminhtml_
 			return $this;
 		}
 			
-		static public function getOptionArray13()
+		static public function getOptionArray15()
 		{
             $data_array=array(); 
-			$data_array[0]='Yes';
-			$data_array[1]='No';
+			$data_array[0]='Enable';
+			$data_array[1]='Disasble';
             return($data_array);
 		}
-		static public function getValueArray13()
+		static public function getValueArray15()
 		{
             $data_array=array();
-			foreach(Mks_Storelocator_Block_Adminhtml_Storelocator_Grid::getOptionArray13() as $k=>$v){
+			foreach(Mks_Storelocator_Block_Adminhtml_Storelocator_Grid::getOptionArray15() as $k=>$v){
                $data_array[]=array('value'=>$k,'label'=>$v);		
 			}
             return($data_array);

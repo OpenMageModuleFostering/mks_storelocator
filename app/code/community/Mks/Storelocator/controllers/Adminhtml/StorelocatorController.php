@@ -125,50 +125,6 @@ else {
         }
 //save image
 
-				 //save image
-		try{
-
-if((bool)$post_data['marker']['delete']==1) {
-
-	        $post_data['marker']='';
-
-}
-else {
-
-	unset($post_data['marker']);
-
-	if (isset($_FILES)){
-
-		if ($_FILES['marker']['name']) {
-
-			if($this->getRequest()->getParam("id")){
-				$model = Mage::getModel("storelocator/storelocator")->load($this->getRequest()->getParam("id"));
-				if($model->getData('marker')){
-						$io = new Varien_Io_File();
-						$io->rm(Mage::getBaseDir('media').DS.implode(DS,explode('/',$model->getData('marker'))));	
-				}
-			}
-						$path = Mage::getBaseDir('media') . DS . 'storelocator' . DS .'storelocator'.DS;
-						$uploader = new Varien_File_Uploader('marker');
-						$uploader->setAllowedExtensions(array('jpg','png','gif'));
-						$uploader->setAllowRenameFiles(false);
-						$uploader->setFilesDispersion(false);
-						$destFile = $path.$_FILES['marker']['name'];
-						$filename = $uploader->getNewFileName($destFile);
-						$uploader->save($path, $filename);
-
-						$post_data['marker']='storelocator/storelocator/'.$filename;
-		}
-    }
-}
-
-        } catch (Exception $e) {
-				Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
-				$this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
-				return;
-        }
-//save image
-
 
 						$model = Mage::getModel("storelocator/storelocator")
 						->addData($post_data)
