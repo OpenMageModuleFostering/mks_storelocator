@@ -29,7 +29,16 @@ $row1 = $sql1->fetch();
 $latitudex = $row1['lat'];
 $longitudex = $row1['longt'];
 $addressx = $row1['address'];
+$radiusx = $row1['radius'];
+if($radiusx!='')
+{
 $radius = $row1['radius'];
+}
+else
+{
+$radius = '250';
+}
+
 
 ?>
 
@@ -37,13 +46,12 @@ $radius = $row1['radius'];
 <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script> 
 <script type="text/javascript">
 
-function map_xxx(x,y,z,a)
+function map_xxx(x,y,a)
 {
 
 var miles = 3;
 	var latitude = x; // parseFloat("26.850883100000000000");
 	var longitude  = y; // parseFloat("75.824783600000040000");
-        var address  = z; // "Rohini, New Delhi, Delhi, India";
         var radius  = a; // "Rohini, New Delhi, Delhi, India";
    
 	var latlngPos = new google.maps.LatLng(latitude,longitude);
@@ -73,7 +81,7 @@ var miles = 3;
 
 
 
-<body onload="map_xxx('<?php  echo $latitudex ?>','<?php echo $longitudex; ?>','<?php echo $addressx; ?>','<?php echo $radius; ?>');">
+<body onload="map_xxx('<?php  echo $latitudex ?>','<?php echo $longitudex; ?>','<?php echo $radius; ?>');">
 <?php  $sql = $connection->query("select * from $tblname where status='0'" ); ?> 
 
 
@@ -96,7 +104,7 @@ while($row = $sql->fetch())
 <tr>
 <?php if($name==1) { ?>
 <td>
-<h3 class="store_name"  onclick="map_xxx('<?php echo $row['lat']; ?>','<?php echo $row['longt']; ?>','<?php echo $row['address']; ?>','<?php echo $row['radius']; ?>');"><?php echo $row['name']; ?></h3>
+<h3 class="store_name"  onclick="map_xxx('<?php echo $row['lat']; ?>','<?php echo $row['longt']; ?>','<?php echo $row['radius']; ?>');"><?php echo $row['name']; ?></h3>
 </td>
 <?php } ?>
 </tr>
