@@ -87,7 +87,7 @@
 		<sort_order>100</sort_order>
 		<children>
 		  <storelocatorbackend module="storelocator">
-			<title>About Us</title>
+			<title> CSV Import / Export </title>
 			<sort_order>0</sort_order>
 			<action>storelocator/adminhtml_storelocatorbackend</action>
 		  </storelocatorbackend>

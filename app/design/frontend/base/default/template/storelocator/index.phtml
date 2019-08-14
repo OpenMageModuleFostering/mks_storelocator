@@ -50,9 +50,9 @@ function map_xxx(x,y,a)
 {
 
 var miles = 3;
-	var latitude = x; // parseFloat("26.850883100000000000");
-	var longitude  = y; // parseFloat("75.824783600000040000");
-        var radius  = a; // "Rohini, New Delhi, Delhi, India";
+	var latitude = x; // latitude code define ("26.850883100000000000");
+	var longitude  = y; // longitude code define ("75.824783600000040000");
+        var radius  = a; // "radius area define";
    
 	var latlngPos = new google.maps.LatLng(latitude,longitude);
         
@@ -91,7 +91,17 @@ var miles = 3;
 <tr><td style="height: 500px; overflow: auto; display:block;" >
 <?php 
 while($row = $sql->fetch())
-{?>
+{
+if($row['radius']!='')
+{
+$rowradius = $row['radius'];
+}
+else
+{
+$rowradius = '250';
+}
+
+?>
 <table id="store-table" class="store-table" style="margin-bottom:10px;">
 <tr>
 <?php if($image==1) { ?>
@@ -104,7 +114,7 @@ while($row = $sql->fetch())
 <tr>
 <?php if($name==1) { ?>
 <td>
-<h3 class="store_name"  onclick="map_xxx('<?php echo $row['lat']; ?>','<?php echo $row['longt']; ?>','<?php echo $row['radius']; ?>');"><?php echo $row['name']; ?></h3>
+<h3 class="store_name"  onclick="map_xxx('<?php echo $row['lat']; ?>','<?php echo $row['longt']; ?>','<?php echo $rowradius; ?>');"><?php echo $row['name']; ?></h3>
 </td>
 <?php } ?>
 </tr>
