@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Mks_Storelocator",
+    "name": "OpenMageModuleFostering\/Mks_Storelocator",
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
     "description": "Store Locator show multi store. store locator increase your store sell. famous store with store locator.",
     "authors": [
-    {
-        "name": "mukesh kumar saini",
-        "email": "in.mukeshsaini@gmail.com"
-    }
-],
+        {
+            "name": "mukesh kumar saini",
+            "email": "in.mukeshsaini@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
